@@ -1,0 +1,11 @@
+
+
+{{ form_start(form) }}
+
+    {{ form_widget(form) }}
+    <div class="flex justify-between items-center mx-auto">
+    <button class="btn-test bgValidateshred">{{ button_label|default('Enregistrer') }}</button>
+    <a class="btn-test bgPurpleshred" href="{{ path('admin_author_browse') }}">Revenir à la liste</a>
+    </div>
+    
+{{ form_end(form) }}

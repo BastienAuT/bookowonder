@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pinnedpage index{% endblock %}
+
+{% block body %}
+    <h1>Pinnedpage index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Page</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pinnedpage in pinnedpages %}
+            <tr>
+                <td>{{ pinnedpage.id }}</td>
+                <td>{{ pinnedpage.page }}</td>
+                <td>{{ pinnedpage.createdAt ? pinnedpage.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ pinnedpage.updatedAt ? pinnedpage.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('admin_pinnedpage_read', {'id': pinnedpage.id}) }}">show</a>
+                    <a href="{{ path('admin_pinnedpage_edit', {'id': pinnedpage.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_pinnedpage_add') }}">Create new</a>
+{% endblock %}

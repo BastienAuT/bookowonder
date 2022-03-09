@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Favorite{% endblock %}
+
+{% block body %}
+    <h1>Create new Favorite</h1>
+
+    {{ include('admin/favorite/_form.html.twig') }}
+
+    <a href="{{ path('admin_favorite_browse') }}">back to list</a>
+{% endblock %}

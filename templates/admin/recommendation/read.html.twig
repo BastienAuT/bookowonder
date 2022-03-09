@@ -1,0 +1,58 @@
+
+{% extends 'base.html.twig' %}
+
+{% block subtitle %}Recommandation
+	{{recommendation.id}}
+{% endblock %}
+
+{% block body %}
+
+<div class="flex justify-evenly items-center flex-wrap py-6">
+	<h1 class="h1-white">Recommandation n°
+		{{recommendation.id}}
+	</h1>
+	<a class="btn-test bgPurpleshred" href="{{ path('admin_recommendation_browse') }}">Retourner à la liste</a>
+</div>
+
+
+<div class="accueil-bg-magic text-center   w-80 sm:w-2/3 border border-gray-200 rounded-lg my-5  shadow-md mx-auto ">
+
+	<div class="flex justify-center items-center flex-wrap">
+
+	
+		<div class="p-6  ">
+		<p class="lg:text-2xl text-md font-bold text-black text-center">Recommandation laissée le :
+					<span class="text-white">{{recommendation.updatedAt ? recommendation.updatedAt | date('Y-m-d H:i:s') : recommendation.createdAt | date('Y-m-d H:i:s') }}</span></p>
+
+			<p class="lg:text-2xl text-md font-bold text-black">Nom de l'utilisateur :
+				<span class="text-white">{{recommendation.user}}</span>
+			</p>
+
+			<p class="lg:text-2xl text-md font-bold text-black">Titre du livre :
+				<span class="text-white">{{recommendation.book}}</span>
+			</p>
+
+			<p class="lg:text-2xl text-md font-bold text-black">Commentaire de l'utilisateur :
+				<span class="text-white">{{ recommendation.content ? recommendation.content : 'L\'utilisateur n\'a pas publié de commentaires'  }}</span>
+			</p>
+			<p class="lg:text-2xl text-md font-bold text-black">L'utilisateur a aimé ce livre ? :
+				<span class="text-white">{{ recommendation.recommendation ? 'Oui' : 'Non'  }}</span>
+			</p>
+
+			
+
+			<div class="flex justify-between items-center my-6 ">
+
+				<a class="btn-test bgValidateshred" href="{{ path('admin_recommendation_edit', {'id': recommendation.id}) }}">Editer la recommandation</a>
+				{{ include('admin/recommendation/_delete_form.html.twig') }}
+			</div>
+
+
+		</div>
+
+	</div>
+
+	
+
+{% endblock %}
+

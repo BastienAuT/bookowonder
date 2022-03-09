@@ -1,0 +1,54 @@
+
+
+
+
+
+
+{% extends 'base.html.twig' %}
+
+{% block subtitle %}Liste des musiques
+{% endblock %}
+
+{% block body %}
+	<h1 class="h1-white">Liste des musiques</h1>
+	<div class="flex justify-center my-5 ">
+		<a class="btn-test bgValidateshred text-center" href="{{ path('admin_audio_add') }}">Ajouter une musique</a>
+	</div>
+
+	<table class="border-collapse border-white border mx-auto text-white bg-black bg-opacity-50 mb-60">
+		<thead >
+			<tr >
+				<th class="sm:p-2 border-white border-2">Id</th>
+				<th class="sm:p-2 border-white border-2">Titre</th>
+				<th class="sm:p-2 border-white border-2">Catégorie</th>
+				<th class="sm:p-2 border-white border-2">actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for audio in audios %}
+				<tr>
+					<td class="sm:p-2 border-white border-2">{{ audio.id }}</td>
+					<td class="sm:p-2 border-white border-2">{{ audio.name }}</td>
+					<td class="sm:p-2 border-white border-2">
+                    {% for category in audio.categories %}
+                        {{ category.name }} - 
+                    {% endfor %}
+                    </td>
+
+					<td class="sm:p-2 border-white border-2">
+						<a class="sm:p-2 text-blue-200 hover:text-white border-blue-200 border-b-2" href="{{ path('admin_audio_read', {'id': audio.id}) }}">Détails</a>
+						<a class="sm:p-2 text-yellow-200 hover:text-white border-yellow-200 border-b-2" href="{{ path('admin_audio_edit', {'id': audio.id}) }}">Modifier</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="9">Pas de musiques trouvées</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+
+	</table>
+
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+
+{% extends 'base.html.twig' %}
+
+{% block subtitle %}Editer la musique'{{audio.id}}
+{% endblock %}
+
+{% block body %}
+	<h1 class="h1-white">Editer la musique n°{{audio.id}}</h1>
+
+	<div class="max-w-2xl mx-auto py-10 px-2 ">
+
+		{{ include('admin/audio/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+	</div>
+
+	<div class="flex justify-center items-center my-6 ">
+		{{ include('admin/audio/_delete_form.html.twig') }}
+	</div>
+
+
+{% endblock %}

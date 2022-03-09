@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Favorite index{% endblock %}
+
+{% block body %}
+    <h1>Favorite index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>IsFavorite</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for favorite in favorites %}
+            <tr>
+                <td>{{ favorite.id }}</td>
+                <td>{{ favorite.isFavorite ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('admin_favorite_read', {'id': favorite.id}) }}">show</a>
+                    <a href="{{ path('admin_favorite_edit', {'id': favorite.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_favorite_add') }}">Create new</a>
+{% endblock %}

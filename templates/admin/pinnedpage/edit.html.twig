@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Pinnedpage{% endblock %}
+
+{% block body %}
+    <h1>Edit Pinnedpage</h1>
+
+    {{ include('admin/pinnedpage/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('admin_pinnedpage_browse') }}">back to list</a>
+
+    {{ include('admin/pinnedpage/_delete_form.html.twig') }}
+{% endblock %}

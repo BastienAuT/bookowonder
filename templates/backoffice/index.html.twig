@@ -1,0 +1,176 @@
+{% extends 'base.html.twig' %}
+{% block subtitle %}Dashboard
+{% endblock %}
+
+
+{% block body %}
+
+	<div class="py-4">
+		<div>
+		<h1 class="h1-white py-6">Bienvenue sur l'interface d'administration de </h1>
+		 <h1 class="text-center text-purpleshred py-4 font-bold lg:text-8xl text-4xl sm:text-5xl md:text-6xl">Book'O'Wonder</h1>
+		</div>
+
+		<div class="flex justify-center mt-4 items-stretch flex-wrap">
+
+			<div class="accueil-bg-magic min-h-200  w-80  border border-gray-200 rounded-lg my-5  shadow-md mx-auto ">
+				<div class="flex justify-between items-center flex-wrap">
+					<div class="p-6 w-30 h-auto ">
+						<img class=" border border-white shadow-md rounded-md" src="{{asset('images_folder/user_default.png')}}" alt="profil de l'utilisateur">
+					</div>
+					<div class="p-6 text-center">
+						<p class="text-2xl font-bold text-gray-900">Gestion des
+							<span class="text-white">utilisateurs</span>
+						</p>
+						<hr class="my-3">
+						<p class="text-2xl font-bold text-gray-900">Il y a actuellement
+							<span class="text-white">{{nbUsers}}</span>
+							{% if nbUsers > 1 %}comptes enregistrés {% else %} compte enregistré
+								{% endif %} 
+						</p>
+						<div class="my-6 ">
+							<a class="btn-test bgPurpleshred mx-auto" href="{{ path('admin_user_browse')}}">Administrer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="accueil-bg-magic min-h-200  w-80  border border-gray-200 rounded-lg my-5  shadow-md mx-auto ">
+				<div class="flex justify-between items-center flex-wrap">
+					<div class="p-6 w-30 h-auto ">
+						<img class=" border border-white shadow-md rounded-md" src="{{asset('books.jpg')}}" alt="profil de l'utilisateur">
+					</div>
+					<div class="p-6 text-center">
+						<p class="text-2xl font-bold text-gray-900">Gestion des
+							<span class="text-white">livres</span>
+						</p>
+						<hr class="my-3">
+						<p class="text-2xl font-bold text-gray-900">Il y a actuellement
+							<span class="text-white">{{nbBooks}}</span> {% if nbBooks > 1 %}livres {% else %}
+								livre{% endif %}, <span class="text-white">{{nbFavorites}}</span> ont été placés en favoris, et il y a <span class="text-white">{{nbPinnedpages}}</span>{% if nbPinnedpages > 1 %} marques-pages{% else %}
+									 marque-page{% endif %}
+								 
+						</p>
+						<div class="my-6 ">
+							<a class="btn-test bgPurpleshred mx-auto" href="{{ path('admin_book_browse')}}">Administrer</a>
+						</div>
+					</div>
+				</div>
+				</div>
+			<div class="accueil-bg-magic min-h-200  w-80  border border-gray-200 rounded-lg my-5  shadow-md mx-auto ">
+				<div class="flex justify-between items-center flex-wrap">
+					<div class="p-6 w-30 h-auto ">
+						<img class=" border border-white shadow-md rounded-md" src="{{asset('categories.jpg')}}" alt="profil de l'utilisateur">
+					</div>
+					<div class="p-6 text-center">
+						<p class="text-2xl font-bold text-gray-900">Gestion des
+							<span class="text-white">catégories</span>
+						</p>
+						<hr class="my-3">
+						<p class="text-2xl font-bold text-gray-900">Il y a actuellement
+							<span class="text-white">{{nbCategories}}</span> {% if nbCategories > 1 %}catégories {% else %}
+								catégorie{% endif %}
+						</p>
+						<div class="my-6 ">
+							<a class="btn-test bgPurpleshred mx-auto" href="{{ path('admin_category_browse')}}">Administrer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accueil-bg-magic min-h-200  w-80  border border-gray-200 rounded-lg my-5  shadow-md mx-auto ">
+				<div class="flex justify-between items-center flex-wrap">
+					<div class="p-6 w-30 h-auto ">
+						<img class=" border border-white shadow-md rounded-md" src="{{asset('audio.jpg')}}" alt="profil de l'utilisateur">
+					</div>
+					<div class="p-6 text-center">
+						<p class="text-2xl font-bold text-gray-900">Gestion des
+							<span class="text-white">musiques</span>
+						</p>
+						<hr class="my-3">
+						<p class="text-2xl font-bold text-gray-900">Il y a actuellement
+							<span class="text-white">{{nbAudios}}</span> {% if nbAudios > 1 %}musiques {% else %}
+								musique{% endif %}
+						</p>
+						<div class="my-6 ">
+							<a class="btn-test bgPurpleshred mx-auto" href="{{ path('admin_audio_browse')}}">Administrer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accueil-bg-magic min-h-200  w-80  border border-gray-200 rounded-lg my-5  shadow-md mx-auto ">
+				<div class="flex justify-between items-center flex-wrap">
+					<div class="p-6 w-30 h-auto ">
+						<img class=" border border-white shadow-md rounded-md" src="{{asset('author.jpg')}}" alt="profil de l'utilisateur">
+					</div>
+					<div class="p-6 text-center">
+						<p class="text-2xl font-bold text-gray-900">Gestion des
+							<span class="text-white">auteurs</span>
+						</p>
+						<hr class="my-3">
+						<p class="text-2xl font-bold text-gray-900">Il y a actuellement
+							<span class="text-white">{{nbAuthors}}</span> {% if nbAuthors > 1 %}auteurs enregistrés {% else %}
+								auteur enregistré{% endif %}
+						</p>
+						<div class="my-6 ">
+							<a class="btn-test bgPurpleshred mx-auto" href="{{ path('admin_author_browse')}}">Administrer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accueil-bg-magic min-h-200  w-80  border border-gray-200 rounded-lg my-5  shadow-md mx-auto ">
+				<div class="flex justify-between items-center flex-wrap">
+					<div class="p-6 w-30 h-auto ">
+						<img class=" border border-white shadow-md rounded-md" src="{{asset('editor.jpg')}}" alt="profil de l'utilisateur">
+					</div>
+					<div class="p-6 text-center">
+						<p class="text-2xl font-bold text-gray-900">Gestion des
+							<span class="text-white">éditeurs</span>
+						</p>
+						<hr class="my-3">
+						<p class="text-2xl font-bold text-gray-900">Il y a actuellement
+							<span class="text-white">{{nbEditors}}</span> {% if nbEditors > 1 %}éditeurs enregistrés {% else %}
+								éditeur enregistré{% endif %}
+						</p>
+						<div class="my-6 ">
+							<a class="btn-test bgPurpleshred mx-auto" href="{{ path('admin_editor_browse')}}">Administrer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="accueil-bg-magic min-h-200  w-80  border border-gray-200 rounded-lg my-5  shadow-md mx-auto ">
+				<div class="flex justify-between items-center flex-wrap">
+					<div class="p-6 w-30 h-auto ">
+						<img class=" border border-white shadow-md rounded-md" src="{{asset('recommendation.jpg')}}" alt="profil de l'utilisateur">
+					</div>
+					<div class="p-6 text-center">
+						<p class="text-2xl font-bold text-gray-900">Gestion des
+							<span class="text-white">recommendations</span>
+						</p>
+						<hr class="my-3">
+						<p class="text-2xl font-bold text-gray-900">Il y a actuellement
+							<span class="text-white">{{nbRecommendations}}</span>{% if nbRecommendations > 1 %} recommendations{% else %} recommandation{% endif %}.
+							{% if bookMostRecommended is not null %}
+							 Le livre le plus recommandé est <span class="text-white">{{bookMostRecommended}}</span>
+							{% else %}
+							 Il y a <span class="text-white">0</span> livres recommandés
+								
+							{% endif %}
+						</p>
+						<div class="my-6 ">
+							<a class="btn-test bgPurpleshred mx-auto" href="{{ path('admin_editor_browse')}}">Administrer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+
+
+	</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+{% block subtitle %}403 : Requête non autorisée{% endblock %}
+
+{% block body %}
+    <h1 class="text-white text-xl text-center">Qui a le droiiiiit, qui a le droiiiit , qui a le droiiiiiiiiiiiiiiiiiiiiit d'faire çaaaa... une 403.</h1>
+<div class="flex items-center justify-center h-100 pt-6">
+<img src="{{asset('403.gif')}}" alt=""></div>
+    <p class="text-white text-center my-6">Je sais pas comment t'es arrivé là, mais t'as pas le droit d'y être.</p>
+    <a class="btn-test bgPurpleshred w-80 mx-auto" href="{{ path('backoffice') }}">Back to the future du subjonctif sinusoïdal de l'anachorète ( page d'accueil... )</a>
+{% endblock %}

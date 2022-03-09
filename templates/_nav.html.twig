@@ -1,0 +1,99 @@
+{% if app.user %}
+<header class="bg-transparent pt-6 pb-16 sm:pb-24 h-20">
+
+<nav class="hidden max-w-7xl mx-auto relative xl:flex xl:items-center xl:justify-evenly">
+
+      <div class=" md:left-0 md:inline md:absolute">
+        <a href="{{path('backoffice')}}">
+          <img class="mx-auto w-auto h-12" src="{{asset('logoBOW.png')}}" alt="icone logo bow">
+        </a>
+      </div>
+
+      <ul class="md:ml-6 md:flex md:space-x-10">
+        <li>
+          <a class="font-medium text-lg text-white hover:underline " href="{{path('backoffice')}}">Accueil</a>
+        </li>
+        <li>
+          <a class="font-medium text-lg text-white  hover:underline " href="{{path('admin_user_browse')}}">Utilisateurs</a>
+        </li>
+        <li>
+          <a class="font-medium text-lg text-white  hover:underline " href="{{path('admin_book_browse')}}">Livres</a>
+        </li>
+        <li>
+          <a class="font-medium text-lg text-white  hover:underline " href="{{path('admin_category_browse')}}">Catégories</a>
+        </li>
+        <li >
+          <a class="font-medium text-lg text-white  hover:underline " href="{{path('admin_author_browse')}}">Auteurs</a>
+        </li>
+        <li >
+          <a class="font-medium text-lg text-white  hover:underline " href="{{path('admin_editor_browse')}}">Editeurs</a>
+        </li>
+        <li>
+          <a class="font-medium text-lg text-white  hover:underline " href="{{path('admin_audio_browse')}}">Musiques</a>
+        </li>
+        <li>
+          <a class="font-medium text-lg text-white  hover:underline " href="{{path('admin_recommendation_browse')}}">Recommendations</a>
+        </li>
+        <li>
+          <a class="font-medium text-lg text-red-500  hover:underline " href="{{path('app_logout')}}">Déconnexion</a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- NAV MOBILE -->
+
+    <nav class="absolute top-2 w-11/12 left-1/2 transform -translate-x-1/2 shadow-md ring-1 border border-2 border-white ring-white ring-opacity-5 p-1 xl:hidden rounded-lg bg-transparent">
+
+      <div class="px-5 h-16 flex items-center justify-between">
+
+        <a href="{{path('backoffice')}}">
+          <img src="{{asset('logoBOW.png')}}" alt="logo fusée" class="h-8 w-auto sm:h-10">
+        </a>
+        <h2 class="text-white text-xl">Book'O'Wonder</h2>
+        <div class="-mr-2">
+          <button class="icone-toggle bg-blue-300 rounded-md p-2 inline-flex items-center justify-center ring-1 ring-white ring-opacity-20">
+            <img src="{{asset('menu.svg')}}" alt="icone menu" class="h-6 w-6">
+          </button>
+        </div>
+
+      </div>
+
+      <ul class="toggle-menu hidden bg-black p-2">
+        <li>
+          <a href="{{path('backoffice')}}" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:underline  hover:bg-gray-500">Accueil</a>
+        </li>
+        <li>
+          <a href="{{path('admin_user_browse')}}" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:underline  hover:bg-gray-500">Utilisateurs</a>
+        </li>
+        <li>
+          <a href="{{path('admin_book_browse')}}" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:underline  hover:bg-gray-500">Livres</a>
+        </li>
+        <li>
+          <a href="{{path('admin_category_browse')}}" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:underline  hover:bg-gray-500">Catégories</a>
+        </li>
+        <li>
+          <a href="{{path('admin_author_browse')}}" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:underline  hover:bg-gray-500">Auteurs</a>
+        </li>
+        <li>
+          <a href="{{path('admin_editor_browse')}}" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:underline  hover:bg-gray-500">Editeurs</a>
+        </li>
+        <li>
+          <a href="{{path('admin_audio_browse')}}" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:underline  hover:bg-gray-500">Musiques</a>
+        </li>
+        <li>
+          <a href="{{path('admin_recommendation_browse')}}" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:underline  hover:bg-gray-500">Recommendations</a>
+        </li>
+        <li>
+          <a href="{{path('app_logout')}}" class="block px-3 py-2 rounded-md text-base font-medium text-red-500 hover:underline  hover:bg-gray-500">Déconnexion</a>
+        </li>
+      </ul>
+
+    </nav>
+  
+
+    
+
+</header>
+{% endif %}
+

@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* .bgCustom {
+    background-image: repeating-linear-gradient(69deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(24deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(159deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(114deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(114deg, rgb(17, 17, 17),rgb(66, 66, 66));
+} */
+.accueil-bg-magic {
+    background-image: repeating-linear-gradient(375deg, rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.03), transparent 3px), linear-gradient(330deg, rgb(93, 9, 194), rgb(14, 252, 246));
+}
+
+.bgCustom {
+    background-image: linear-gradient(389deg, rgb(168, 86, 201) 0%, rgb(168, 86, 201) 3%,rgb(140, 74, 173) 3%, rgb(140, 74, 173) 11%,rgb(112, 61, 145) 11%, rgb(112, 61, 145) 20%,rgb(85, 49, 118) 20%, rgb(85, 49, 118) 49%,rgb(57, 37, 90) 49%, rgb(57, 37, 90) 71%,rgb(29, 24, 62) 71%, rgb(29, 24, 62) 72%,rgb(1, 12, 34) 72%, rgb(1, 12, 34) 100%),linear-gradient(67.5deg, rgb(168, 86, 201) 0%, rgb(168, 86, 201) 3%,rgb(140, 74, 173) 3%, rgb(140, 74, 173) 11%,rgb(112, 61, 145) 11%, rgb(112, 61, 145) 20%,rgb(85, 49, 118) 20%, rgb(85, 49, 118) 49%,rgb(57, 37, 90) 49%, rgb(57, 37, 90) 71%,rgb(29, 24, 62) 71%, rgb(29, 24, 62) 72%,rgb(1, 12, 34) 72%, rgb(1, 12, 34) 100%),linear-gradient(112.5deg, rgb(168, 86, 201) 0%, rgb(168, 86, 201) 3%,rgb(140, 74, 173) 3%, rgb(140, 74, 173) 11%,rgb(112, 61, 145) 11%, rgb(112, 61, 145) 20%,rgb(85, 49, 118) 20%, rgb(85, 49, 118) 49%,rgb(57, 37, 90) 49%, rgb(57, 37, 90) 71%,rgb(29, 24, 62) 71%, rgb(29, 24, 62) 72%,rgb(1, 12, 34) 72%, rgb(1, 12, 34) 100%),linear-gradient(344deg, rgb(168, 86, 201) 0%, rgb(168, 86, 201) 3%,rgb(140, 74, 173) 3%, rgb(140, 74, 173) 11%,rgb(112, 61, 145) 11%, rgb(112, 61, 145) 20%,rgb(85, 49, 118) 20%, rgb(85, 49, 118) 49%,rgb(57, 37, 90) 49%, rgb(57, 37, 90) 71%,rgb(29, 24, 62) 71%, rgb(29, 24, 62) 72%,rgb(1, 12, 34) 72%, rgb(1, 12, 34) 100%),linear-gradient(389deg, rgb(95, 3, 74),rgb(35, 65, 96)); background-blend-mode:overlay,overlay,overlay,overlay,normal;}
+.boxShadowCustom{
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.35); 
+box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.35);
+}
+.boxShadowCustom:hover{
+    -webkit-box-shadow: 0px 0px 2px 2px #FFFFFF; 
+box-shadow: 0px 0px 2px 2px #FFFFFF;
+}
+.boxShadowCustom:focus{
+    -webkit-box-shadow: 0px 0px 2px 2px #96FFAD; 
+box-shadow: 0px 0px 2px 2px #96FFAD;
+}
+
+
+.text-purpleshred {
+
+    font-family: 'Satisfy', cursive;
+    background-image: repeating-linear-gradient(282deg, #dd1c80, #7a2db9, #2b7ed0, #2bc0d0);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 1000% 1000%;
+  background-position:bottom;
+  background-repeat: no-repeat;
+
+  -webkit-animation: AnimationName 10s linear infinite;
+    -moz-animation: AnimationName 10s linear infinite;
+    animation: AnimationName 10s linear infinite;
+  
+}
+
+.bgPurpleshred{
+    background-image: linear-gradient(112.5deg, rgb(225,101,118) 0%, rgb(225,101,118) 3%,rgb(219, 107, 130) 3%, rgb(219, 107, 130) 34%,rgb(187, 104, 131) 34%, rgb(187, 104, 131) 46%,rgb(156, 102, 131) 46%, rgb(156, 102, 131) 51%,rgb(124, 99, 132) 51%, rgb(124, 99, 132) 52%,rgb(93, 97, 132) 52%, rgb(93, 97, 132) 76%,rgb(61, 94, 133) 76%, rgb(61, 94, 133) 84%,rgb(30, 92, 133) 84%, rgb(30, 92, 133) 100%),linear-gradient(157.5deg, rgb(225,101,118) 0%, rgb(225,101,118) 3%,rgb(219, 107, 130) 3%, rgb(219, 107, 130) 34%,rgb(187, 104, 131) 34%, rgb(187, 104, 131) 46%,rgb(156, 102, 131) 46%, rgb(156, 102, 131) 51%,rgb(124, 99, 132) 51%, rgb(124, 99, 132) 52%,rgb(93, 97, 132) 52%, rgb(93, 97, 132) 76%,rgb(61, 94, 133) 76%, rgb(61, 94, 133) 84%,rgb(30, 92, 133) 84%, rgb(30, 92, 133) 100%),linear-gradient(325deg, rgb(225,101,118) 0%, rgb(225,101,118) 3%,rgb(219, 107, 130) 3%, rgb(219, 107, 130) 34%,rgb(187, 104, 131) 34%, rgb(187, 104, 131) 46%,rgb(156, 102, 131) 46%, rgb(156, 102, 131) 51%,rgb(124, 99, 132) 51%, rgb(124, 99, 132) 52%,rgb(93, 97, 132) 52%, rgb(93, 97, 132) 76%,rgb(61, 94, 133) 76%, rgb(61, 94, 133) 84%,rgb(30, 92, 133) 84%, rgb(30, 92, 133) 100%),linear-gradient(370deg, rgb(71, 69, 135),rgb(149,12,103)); background-blend-mode:overlay,overlay,overlay,normal;
+    background-size: 400% 400%;
+  background-position:bottom;
+  background-repeat: no-repeat;
+
+  -webkit-animation: AnimationName 30s linear infinite;
+    -moz-animation: AnimationName 30s linear infinite;
+    animation: AnimationName 30s linear infinite;
+
+  
+}
+.bgPurpleshred:hover{
+    background-image: linear-gradient(311deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%,rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%,rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%,rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%,rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%),linear-gradient(266deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%,rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%,rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%,rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%,rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%),linear-gradient(401deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%,rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%,rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%,rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%,rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%),linear-gradient(356deg, rgb(79, 35, 157),rgb(43, 171, 222)); background-blend-mode:overlay,overlay,overlay,normal;
+    background-size: 400% 400%;
+  background-position:bottom;
+  background-repeat: no-repeat;
+
+  -webkit-animation: AnimationName 30s linear infinite;
+    -moz-animation: AnimationName 30s linear infinite;
+    animation: AnimationName 30s linear infinite;
+}
+.bgCancelshred{
+    background-image: linear-gradient(161deg, rgb(237, 237, 237),rgb(236, 236, 236)),linear-gradient(206deg, rgb(163, 125, 62) 0%, rgb(163, 125, 62) 22%,rgb(149, 100, 59) 22%, rgb(149, 100, 59) 32%,rgb(134, 75, 56) 32%, rgb(134, 75, 56) 37%,rgb(120, 50, 53) 37%, rgb(120, 50, 53) 51%,rgb(105, 25, 50) 51%, rgb(105, 25, 50) 55%,rgb(91, 0, 47) 55%, rgb(91, 0, 47) 100%),linear-gradient(112.5deg, rgb(163, 125, 62) 0%, rgb(163, 125, 62) 22%,rgb(149, 100, 59) 22%, rgb(149, 100, 59) 32%,rgb(134, 75, 56) 32%, rgb(134, 75, 56) 37%,rgb(120, 50, 53) 37%, rgb(120, 50, 53) 51%,rgb(105, 25, 50) 51%, rgb(105, 25, 50) 55%,rgb(91, 0, 47) 55%, rgb(91, 0, 47) 100%),linear-gradient(161deg, rgb(163, 125, 62) 0%, rgb(163, 125, 62) 22%,rgb(149, 100, 59) 22%, rgb(149, 100, 59) 32%,rgb(134, 75, 56) 32%, rgb(134, 75, 56) 37%,rgb(120, 50, 53) 37%, rgb(120, 50, 53) 51%,rgb(105, 25, 50) 51%, rgb(105, 25, 50) 55%,rgb(91, 0, 47) 55%, rgb(91, 0, 47) 100%); background-blend-mode:overlay, overlay, overlay, normal;
+    background-size: 400% 400%;
+  background-position:bottom;
+  background-repeat: no-repeat;
+
+  -webkit-animation: AnimationName 30s linear infinite;
+    -moz-animation: AnimationName 30s linear infinite;
+    animation: AnimationName 30s linear infinite;
+
+  
+}
+.bgCancelshred:hover{
+    background-image: linear-gradient(311deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%,rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%,rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%,rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%,rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%),linear-gradient(266deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%,rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%,rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%,rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%,rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%),linear-gradient(401deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%,rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%,rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%,rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%,rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%),linear-gradient(356deg, rgb(79, 35, 157),rgb(43, 171, 222)); background-blend-mode:overlay,overlay,overlay,normal;
+    background-size: 400% 400%;
+  background-position:bottom;
+  background-repeat: no-repeat;
+
+  -webkit-animation: AnimationName 30s linear infinite;
+    -moz-animation: AnimationName 30s linear infinite;
+    animation: AnimationName 30s linear infinite;
+}
+.bgValidateshred{
+    background-image: linear-gradient(118deg, rgb(32,190,20) 0%, rgb(32,190,20) 22%,rgb(44,149,14) 22%, rgb(44,149,14) 61%,rgb(117, 169, 93) 61%, rgb(117, 169, 93) 68%,rgb(94, 147, 60) 68%, rgb(94, 147, 60) 92%,rgb(70, 126, 26) 92%, rgb(70, 126, 26) 100%),linear-gradient(253deg, rgb(32,190,20) 0%, rgb(32,190,20) 22%,rgb(44,149,14) 22%, rgb(44,149,14) 61%,rgb(117, 169, 93) 61%, rgb(117, 169, 93) 68%,rgb(94, 147, 60) 68%, rgb(94, 147, 60) 92%,rgb(70, 126, 26) 92%, rgb(70, 126, 26) 100%),linear-gradient(208deg, rgb(32,190,20) 0%, rgb(32,190,20) 22%,rgb(44,149,14) 22%, rgb(44,149,14) 61%,rgb(117, 169, 93) 61%, rgb(117, 169, 93) 68%,rgb(94, 147, 60) 68%, rgb(94, 147, 60) 92%,rgb(70, 126, 26) 92%, rgb(70, 126, 26) 100%),linear-gradient(208deg, rgb(37,71,42),rgb(82, 81, 20)); background-blend-mode:overlay,overlay,overlay,normal;
+    background-size: 400% 400%;
+  background-position:bottom;
+  background-repeat: no-repeat;
+
+  -webkit-animation: AnimationName 30s linear infinite;
+    -moz-animation: AnimationName 30s linear infinite;
+    animation: AnimationName 30s linear infinite;
+    
+}
+.bgValidateshred:hover{
+    background-image: linear-gradient(311deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%,rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%,rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%,rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%,rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%),linear-gradient(266deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%,rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%,rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%,rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%,rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%),linear-gradient(401deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%,rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%,rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%,rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%,rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%),linear-gradient(356deg, rgb(79, 35, 157),rgb(43, 171, 222)); background-blend-mode:overlay,overlay,overlay,normal;
+    background-size: 400% 400%;
+  background-position:bottom;
+  background-repeat: no-repeat;
+
+  -webkit-animation: AnimationName 30s linear infinite;
+    -moz-animation: AnimationName 30s linear infinite;
+    animation: AnimationName 30s linear infinite;
+}
+
+
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@layer components {
+    
+    
+    .btn-test{
+        @apply rounded-md shadow flex items-center justify-center w-32 lg:w-40  my-6 md:my-0 text-center text-sm sm:text-base font-medium md:py-4 lg:text-lg md:px-10 ring-1 ring-white text-white hover:text-white ;
+    }
+    
+    .h1-white {
+        @apply text-white text-center md:text-4xl text-2xl 
+    }
+}

@@ -1,0 +1,17 @@
+
+{% extends 'base.html.twig' %}
+
+{% block subtitle %}Ajouter une catégorie{% endblock %}
+
+
+{% block body %}
+    
+    <h1 class="h1-white">Créer une catégorie</h1>
+
+    <div class="max-w-2xl mx-auto py-10 px-2 ">
+    {{ include('admin/category/_form.html.twig') }}
+    </div>
+
+
+    
+{% endblock %}

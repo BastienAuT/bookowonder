@@ -1,0 +1,49 @@
+
+
+
+
+
+
+{% extends 'base.html.twig' %}
+
+{% block subtitle %}Liste des auteurs
+{% endblock %}
+
+{% block body %}
+	<h1 class="h1-white">Liste des auteurs</h1>
+	<div class="flex justify-center my-5 ">
+		<a class="btn-test bgValidateshred text-center" href="{{ path('admin_author_add') }}">Créer un auteur</a>
+	</div>
+
+	<table class="border-collapse border-white border mx-auto text-white bg-black bg-opacity-50 mb-60">
+		<thead >
+			<tr >
+				<th class="sm:p-2 border-white border-2">Id</th>
+				<th class="sm:p-2 border-white border-2">Auteur</th>
+				<th class="sm:p-2 border-white border-2">Nombre de livres</th>
+				<th class="sm:p-2 border-white border-2">actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for author in authors %}
+				<tr>
+					<td class="sm:p-2 border-white border-2">{{ author.id }}</td>
+					<td class="sm:p-2 border-white border-2">{{ author.firstname }} {{author.lastname}}</td>
+					<td class="sm:p-2 border-white border-2">{{ author.books|length }}</td>
+					<td class="sm:p-2 border-white border-2">
+						<a class="sm:p-2 text-blue-200 hover:text-white border-blue-200 border-b-2" href="{{ path('admin_author_read', {'id': author.id}) }}">Détails</a>
+						<a class="sm:p-2 text-yellow-200 hover:text-white border-yellow-200 border-b-2" href="{{ path('admin_author_edit', {'id': author.id}) }}">Modifier</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="9">Pas d'auteurs trouvés</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+
+	</table>
+
+
+
+{% endblock %}

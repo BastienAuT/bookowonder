@@ -1,0 +1,4 @@
+<form method="post" action="{{ path('admin_book_delete', {'id': book.id}) }}" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce livre ?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ book.id) }}">
+    <button class="btn-test bgCancelshred">Supprimer le livre</button>
+</form>

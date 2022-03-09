@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+		<title>
+			{% block subtitle %}{% endblock %}
+			{% block title %}| Administration Book'O'Wonder
+			{% endblock %}
+		</title>
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+	<body class="">
+		<div class="w-full h-full bgCustom pb-60">
+			{% include "_nav.html.twig" %}
+			{% block body %}{% endblock %}
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>

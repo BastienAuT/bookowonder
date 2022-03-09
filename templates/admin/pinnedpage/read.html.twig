@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pinnedpage{% endblock %}
+
+{% block body %}
+    <h1>Pinnedpage</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ pinnedpage.id }}</td>
+            </tr>
+            <tr>
+                <th>Page</th>
+                <td>{{ pinnedpage.page }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ pinnedpage.createdAt ? pinnedpage.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ pinnedpage.updatedAt ? pinnedpage.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_pinnedpage_browse') }}">back to list</a>
+
+    <a href="{{ path('admin_pinnedpage_edit', {'id': pinnedpage.id}) }}">edit</a>
+
+    {{ include('admin/pinnedpage/_delete_form.html.twig') }}
+{% endblock %}
+
+
+
+
+
+
+
+{% extends 'base.html.twig' %}
+
+{% block subtitle %}Marque Page 
+	{{pinnedpage.id}}
+{% endblock %}
+
+{% block body %}
+
+<div class="flex justify-evenly items-center flex-wrap py-6">
+	<h1 class="h1-white">Recommandation n°
+		{{recommendation.id}}
+	</h1>
+	<a class="btn-normal" href="{{ path('admin_recommendation_browse') }}">Retourner à la liste</a>
+</div>
+
+
+<div class="accueil-bg-magic text-center   w-80 sm:w-2/3 border border-gray-200 rounded-lg my-5  shadow-md mx-auto ">
+
+	<div class="flex justify-center items-center flex-wrap">
+
+	
+		<div class="p-6  ">
+
+			<p class="lg:text-2xl text-md font-bold text-black">Nom de l'utilisateur :
+				<span class="text-white">{{recommendation.user}}</span>
+			</p>
+
+			<p class="lg:text-2xl text-md font-bold text-black">Titre du livre :
+				<span class="text-white">{{recommendation.book}}</span>
+			</p>
+
+			<p class="lg:text-2xl text-md font-bold text-black">Commentaire de l'utilisateur :
+				<span class="text-white">{{ recommendation.content ? recommendation.content : 'L\'utilisateur n\'a pas publié de commentaires'  }}</span>
+			</p>
+			<p class="lg:text-2xl text-md font-bold text-black">L'utilisateur a aimé ce livre ? :
+				<span class="text-white">{{ recommendation.recommendation ? 'Oui' : 'Non'  }}</span>
+			</p>
+
+			
+
+			<div class="flex justify-between items-center my-6 ">
+
+				<a class="btn-validate" href="{{ path('admin_recommendation_edit', {'id': recommendation.id}) }}">Editer la recommandation</a>
+				{{ include('admin/recommendation/_delete_form.html.twig') }}
+			</div>
+
+
+		</div>
+
+	</div>
+
+	
+
+{% endblock %}
+

@@ -1,0 +1,49 @@
+
+
+
+
+
+
+{% extends 'base.html.twig' %}
+
+{% block subtitle %}Liste des éditeurs
+{% endblock %}
+
+{% block body %}
+	<h1 class="h1-white">Liste des éditeurs</h1>
+	<div class="flex justify-center my-5 ">
+		<a class="btn-test bgValidateshred text-center" href="{{ path('admin_editor_add') }}">Créer un éditeur</a>
+	</div>
+
+	<table class="border-collapse border-white border mx-auto text-white bg-black bg-opacity-50 mb-60">
+		<thead >
+			<tr >
+				<th class="sm:p-2 border-white border-2">Id</th>
+				<th class="sm:p-2 border-white border-2">Editeur</th>
+				<th class="sm:p-2 border-white border-2">Nombre de livres</th>
+				<th class="sm:p-2 border-white border-2">actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for editor in editors %}
+				<tr>
+					<td class="sm:p-2 border-white border-2">{{ editor.id }}</td>
+					<td class="sm:p-2 border-white border-2">{{ editor.name }}</td>
+					<td class="sm:p-2 border-white border-2">{{ editor.books|length }}</td>
+					<td class="sm:p-2 border-white border-2">
+						<a class="sm:p-2 text-blue-200 hover:text-white border-blue-200 border-b-2" href="{{ path('admin_editor_read', {'id': editor.id}) }}">Détails</a>
+						<a class="sm:p-2 text-yellow-200 hover:text-white border-yellow-200 border-b-2" href="{{ path('admin_editor_edit', {'id': editor.id}) }}">Modifier</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="9">Pas d'éditeurs trouvés</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+
+	</table>
+
+
+
+{% endblock %}

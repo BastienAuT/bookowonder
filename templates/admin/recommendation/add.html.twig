@@ -1,0 +1,18 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block subtitle %}Ajouter une recommandation{% endblock %}
+
+
+{% block body %}
+    
+    <h1 class="h1-white">Créer une nouvelle recommandation</h1>
+
+    <div class="max-w-2xl mx-auto py-10 px-2 ">
+    {{ include('admin/recommendation/_form.html.twig') }}
+    </div>
+
+
+    
+{% endblock %}

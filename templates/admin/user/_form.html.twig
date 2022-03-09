@@ -1,0 +1,22 @@
+{% set currentRoute = app.request.get('_route') %}
+
+{{ form_start(form) }}
+
+   {# We hide the row where the password is show for more security #}
+     {% if currentRoute  == 'admin_user_edit' %}
+        {{form_widget(form.password, {'attr' : {'class': 'hidden'}} ) }}
+     {% endif %}
+    {{ form_widget(form) }}
+
+     
+
+
+    <div class="flex justify-between items-center mx-auto">
+    <button class="btn-test bgValidateshred">{{ button_label|default('Enregistrer') }}</button>
+    <a class="btn-test bgPurpleshred" href="{{ path('admin_user_browse') }}">Revenir à la liste</a>
+    </div>
+    
+{{ form_end(form) }}
+
+
+

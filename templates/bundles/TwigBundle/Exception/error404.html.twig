@@ -1,0 +1,13 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+{% block subtitle %}404 : page non trouvée{% endblock %}
+
+{% block body %}
+    <h1 class="text-white text-xl text-center">Bon bah... 404, tu connais le bail : on a pas trouvé la page que tu demandes !</h1>
+<div class="flex items-center justify-center h-100 pt-6">
+<img src="{{asset('mimille.gif')}}" alt="">
+    </div>
+    
+    <p class="text-white text-center my-6">Bah alors, on est perdu ? T'es pas génial comme admin, tu passeras me voir au bureau, on discutera...</p>
+    <a class="btn-test bgPurpleshred w-80 mx-auto" href="{{ path('backoffice') }}"> En attendant, retourne au boulot !</a>
+{% endblock %}

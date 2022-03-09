@@ -1,0 +1,11 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+{% block subtitle %}500 : Erreur interne du serveur{% endblock %}
+
+{% block body %}
+    <h1 class="text-white text-xl text-center">Houston, on a un problème.</h1>
+<div class="flex items-center justify-center h-100 pt-6">
+<img src="{{asset('500.gif')}}" alt=""></div>
+    <p class="text-white text-center my-6">On sait pas ce qu'il se passe, mais on est dessus. Enfin, on verra ça plus tard !</p>
+    <a class="btn-test bgPurpleshred w-80 mx-auto" href="{{ path('backoffice') }}">On rentre ?</a>
+{% endblock %}
